@@ -7,12 +7,13 @@ import { AppComponent } from './app.component';
 import {FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ModuleWithProviders } from '@angular/compiler/src/core';
+import { UsuarioComponent } from './componente/usuario/usuario/usuario.component';
 
 export const appRouters: Routes = [
 
   //{path: 'usuarioAdd', component: UsuarioAddComponent},
   //{path: 'usuarioAdd/:id', component: UsuarioAddComponent},
-  //{path: 'usuarioProduto', component: UsuarioComponent}
+   {path: 'usuarioList', component: UsuarioComponent}
 ];
 
 export const routes : ModuleWithProviders = RouterModule.forRoot(appRouters);
@@ -20,7 +21,8 @@ export const routes : ModuleWithProviders = RouterModule.forRoot(appRouters);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
