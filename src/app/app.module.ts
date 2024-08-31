@@ -8,12 +8,13 @@ import {FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ModuleWithProviders } from '@angular/compiler/src/core';
 import { UsuarioComponent } from './componente/usuario/usuario/usuario.component';
+import { UsuarioAddComponent } from './componente/usuario/usuario-add/usuario-add.component';
 
 export const appRouters: Routes = [
 
-  //{path: 'usuarioAdd', component: UsuarioAddComponent},
-  //{path: 'usuarioAdd/:id', component: UsuarioAddComponent},
-   {path: 'usuarioList', component: UsuarioComponent}
+  {path: 'usuarioAdd', component: UsuarioAddComponent},
+  {path: 'usuarioAdd/:id', component: UsuarioAddComponent},
+  {path: 'usuarioList', component: UsuarioComponent}
 ];
 
 export const routes : ModuleWithProviders = RouterModule.forRoot(appRouters);
@@ -22,7 +23,8 @@ export const routes : ModuleWithProviders = RouterModule.forRoot(appRouters);
 @NgModule({
   declarations: [
     AppComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    UsuarioAddComponent
   ],
   imports: [
     BrowserModule,
