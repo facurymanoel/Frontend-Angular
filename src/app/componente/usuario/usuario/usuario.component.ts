@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class UsuarioComponent implements OnInit {
 
    produtos: Array<User>;
+   nome: string;
   
    constructor(private usuarioService: UsuarioService) { 
 
@@ -29,5 +30,11 @@ export class UsuarioComponent implements OnInit {
       });
     });
   }
+
+  consultarProduto(){
+    this.usuarioService.consultarProduto(this.nome).subscribe( data =>{
+         this.produtos = data;
+    });
+}
 
 }

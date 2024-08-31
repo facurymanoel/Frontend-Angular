@@ -41,8 +41,6 @@ updateProduto(id: number, user: any) : Observable<any>{
 deletarProduto(id: number): Observable<any>{
   
      return this.http.delete(AppConstants.baseURL + id, {responseType : 'text'});
-}
+  }
 
-
-
-}
+ }
